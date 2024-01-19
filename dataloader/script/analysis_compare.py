@@ -4,14 +4,14 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 ### t, avx, avy, avz, lvx, lvy, lvz, lax, lay, laz
-result_path_pose = "/src/dataloader/data/write/AnalysisDataPOSE.txt"
+result_path_pose = "/home/zhonglingjun/GXT/Fusion_ROS/src/dataloader/data/write/AnalysisDataPOSE.txt"
 result_data_pose = np.zeros([10, 0])
 with open(result_path_pose, "r") as f:
     for line in f.readlines():
         data = line.split(" ")
         result_data_pose = np.concatenate((result_data_pose, np.array(data, dtype=float).reshape((10, 1))), axis=1)
 
-result_path_imu = "/src/dataloader/data/write/AnalysisDataIMU.txt"
+result_path_imu = "/home/zhonglingjun/GXT/Fusion_ROS/src/dataloader/data/write/AnalysisDataIMU.txt"
 result_data_imu = np.zeros([10, 0])
 with open(result_path_imu, "r") as f:
     for line in f.readlines():

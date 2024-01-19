@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 ### t, avx, avy, avz, lvx, lvy, lvz, lax, lay, laz
-result_path = "/src/dataloader/data/write/Euroc_AnalysisDataPOSE.txt"
+result_path = "/home/zhonglingjun/GXT/Fusion_ROS/src/dataloader/data/write/AnalysisDataPOSE.txt"
 result_data = np.zeros([10, 0])
 with open(result_path, "r") as f:
     for line in f.readlines():
